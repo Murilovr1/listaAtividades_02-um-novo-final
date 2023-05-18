@@ -6,10 +6,21 @@
     */
 
     //ENTRADA
+    let num1 = Number(prompt("Insira um número inteiro:"))
+    let num2 = Number(prompt("Insira outro número inteiro:"))
 
     //PROCESSAMENTO
-
+    if(num1 === num2){
+        alert(`Coloque outro número, sem que seja números iguais!`)
+    }
+    else{
+    const num3 = num1
+    num1 = num2
+    num2 = num3
+    }
     //SAÍDA
+    alert(`O número1 antigo era ${num2} e o novo é ${num1}`)
+    alert(`O número2 antigo era ${num1} e o novo é ${num2}`)
 
     
 </script>
