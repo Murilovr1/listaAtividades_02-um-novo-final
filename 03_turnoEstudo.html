@@ -15,7 +15,7 @@
     let turno = prompt("Em que turno você estuda? Responda com M=matutino V=vespertino N=noturno").toUpperCase().trim()
     
     //PROCESSAMENTO
-    if(turno != "M" && turno != "V" && turno != "N" ){
+    if(turno !== "M" && turno !== "V" && turno !== "N" ){
         alert(`Coloque só as letras M-matutino ou V-Vespertino ou N-Noturno `)
     }
     else if(turno === "M"){
