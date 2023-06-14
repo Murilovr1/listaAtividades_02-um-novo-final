@@ -8,7 +8,7 @@
 
     // Entrada
     const porte = prompt(`Qual o porte de seu cachorro? Responda P, M, G.`).toUpperCase().trim();
-    const idade = Number(prompt(`Qual sua idade?`).trim());
+    const idade = Number(prompt(`Qual a idade do seu cachorro?`).trim());
 
     // Processamento
     if (porte.length > 1 || isNaN(idade)) {
@@ -16,15 +16,15 @@
     }
     else {
         if (porte == "P") {
-            const idadeCachorro = Math.round(idade/5)
+            const idadeCachorro = Math.round(idade * 5)
             alert(`Seu cachorro tem idade de ${idadeCachorro}.`)
         }
         else if (porte == "M") {
-            const idadeCachorro = Math.round(idade/6)
+            const idadeCachorro = Math.round(idade * 6)
             alert(`Seu cachorro tem idade de ${idadeCachorro}.`)
         }
         else if (porte == "G") {
-            const idadeCachorro = Math.round(idade/7)
+            const idadeCachorro = Math.round(idade * 7)
             alert(`Seu cachorro tem idade de ${idadeCachorro}.`)
         }
     }
