@@ -11,9 +11,44 @@
     */
 
     //ENTRADA
-    
+     let num = Number(Math.round(prompt("Insira um número inteiro menor que 1000").trim()));
 
     //PROCESSAMENTO
+    if (isNaN(num)) {
+        alert(`Insira um NÚMERO!`)
+    }
+    else {
+        if (num >= 1000 || num <= 0) {
+        alert(`Insira um número INFERIOR a 1000(MIL) e SUPERIOR a 0(ZERO)!`);
+    }
+    else {
+        const centenas = Math.floor(num / 100);
+        const dezenas = Math.floor((num % 100) / 10);
+        const unidades = Math.floor((num % 100) % 10);
+
+        let resultado = "";
+
+        if (centenas > 0) {
+            resultado += `${centenas} centena${centenas > 1 ? "s" : ""}`
+            if (dezenas > 0 || unidades > 0) {
+                resultado += ", ";
+            }
+        }
+
+        if (dezenas > 0) {
+            resultado += `${dezenas} dezena${dezenas > 1 ? "s" : ""}`;
+            if (unidades > 0) {
+                resultado += " e ";
+            }
+        }
+        if (unidades > 0){
+            resultado += `${unidades} unidade${unidades > 1 ? "s" : ""}`;
+        }
+        alert(`O seu número possui ${resultado}.`)
+    }
+    }
+     
+    //saida
 
 
 </script>

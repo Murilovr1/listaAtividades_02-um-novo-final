@@ -10,7 +10,40 @@
     const M = prompt("Qual o mês atual aí?").replace(",",".").trim();
 
     //PROCESSAMENTO
-    if (H == "Norte" || H == "Sul")
+    if (H == "Norte" || H == "Sul") {
+        alert(`Insira Norte ou Sul por favor`)
+    }
+    else {
+        if (H == "Norte") {
+            if (M == "dezembro" || M== "janeiro" || M== "Fevereiro") {
+                alert(`Aí onde você mora é inverno atualmente`);
+            }
+            else if (M == "março" || M== "maio" | M== "junho") {
+                alert(`Aí onde você mora e'a primavera atualmente`);
+            }
+            else if (M== "junho" || M== "julho" || M== "setembro") {
+                alert(`Aí onde você mora é verão atualmente`);
+            }
+            else if(M== "setembro" || M== "outubro" || M== "novembro" || M== "dezembro") {
+                alert(`Aí onde você mora é outono atualmente`);
+            }
+        }
+    }
+
+    if (S== "Sul") {
+        if (M== "dezembro" || M== "janeiro" || M== "fevereiro" || M== "março") {
+            alert(`Aí atualmente é verão`);
+        }
+        else if(M== "março" || M== "maio" || M== "abril" || M== "junho") {
+            alert(`Aí atualmente é outono`);
+        }
+        else if (M== "junho" || M== "julho" || M== "setembro") {
+            alert(`Aí atualmente é inverno`);
+        }
+        else if (M== "stembro" || M== "outubro" || M== "novembro" || M== "dezembro") {
+            alert(`Aí atualmente é primavera`);
+        }
+    }
 
     
     //SAÍDA

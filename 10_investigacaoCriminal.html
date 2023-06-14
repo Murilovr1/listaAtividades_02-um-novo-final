@@ -11,31 +11,30 @@
     */
 
     //ENTRADA
-    const p1 = prompt("Você telefonou para a vítima?S ou N").trim();
-    const p2 = prompt("Você esteve no local do crime?S ou N").trim();
-    const p3 = prompt("Você mora perto da vítima? S ou N").trim();
-    const p4 = prompt("Você devia dinheiro ou alguma coisa a vítima?S ou N").trim();
-    const p5 = prompt("Você já trabalhou com a vítima?S ou N").trim();
-
-
+    const telefonema = Number(prompt("Telefonou para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const local = Number(prompt("Esteve no local do crime? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const moradia = Number(prompt("Mora perto da vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const divida = Number(prompt("Devia para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const trabalho = Number(prompt("Já trabalhou com a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
     //PROCESSAMENTO
-    if (p1.length > 1 || p2.length > 1 || p3.length > 1 || p4.lenght > 1 || p5.lenght > 1) {
-        alert(`Error`);
-    }
-    if (p1 == "S" && p2 == "S" && p3 == "S" && p4 == "S" && p5 == "S") {
-        alert(`Você é culpado`);
-    }
-    else if (p1 == "N" && p2 == "N" && p3 == "N" && p4 == "N" && p5 == "N") {
-        alert(`Você é classificado como inocente`);
-    }
 
-    else if (p1 == "N" && p2 == "S" && p3 == "S" && p4 == "N" && p5 =="S" || p1 == "S" && p2=="N" && p3=="S" && p4=="S" && p5=="N" || p1 == "S" && p2 == "S" && p3 == "S" && p4 == "N" && p5 =="S" || p1 == "S" && p2=="N" && p3=="S" && p4=="S" && p5=="S" || p1 == "N" && p2 == "S" && p3 == "S" && p4 == "S" && p5 =="S" || p1 == "S" && p2=="S" && p3=="S" && p4=="S" && p5=="N") {
-        alert(`Você é classificado como suspeito cúmplice`);
+    if (telefonema.length > 1 || local.length > 1 || moradia.length > 1 || divida.length > 1 || trabalho.length > 1) {
+        alert(`Valor inválido`);
     }
-    else if (p1 == "N" && p2 == "S" && p3 == "N" && p4 == "N" && p5 =="S" || p1 == "S" && p2=="N" && p3=="S" && p4=="N" && p5=="N" || p1 == "N" && p2 == "N" && p3 == "N" && p4 == "S" && p5 =="S" || p1 == "N" && p2=="S" && p3=="N" && p4=="S" && p5=="N") {
-        alert(`Você é classificado como suspeito`);
+    else {
+        if (telefonema + local + moradia + divida + trabalho == 2) {
+            alert(`Classificação: Suspeito.`);
+        }
+        else if (telefonema + local + moradia + divida + trabalho == 3 || telefonema + local + moradia + divida + trabalho == 4) {
+            alert(`Classificação: Cúmplice.`);
+        }
+        else if (telefonema + local + moradia + divida + trabalho == 5) {
+            alert(`Classificação: Assasino`);
+        }
+        else {
+            alert(`Classificação: Inocente`);
+        }
     }
-
 
     //SAÍDA
 

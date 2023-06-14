@@ -6,11 +6,21 @@
     */
 
     //ENTRADA
-
+    const num = Number(prompt("Informe um número qualquer.").replace(",", ".").trim());
 
     //PROCESSAMENTO
+    if (isNaN(num)) {
+        alert(`Valor inválido.`);
+    }
+    else {
+        if (num % 1 === 0) {
+            alert(`Ele é inteiro.`)
+        }
+        else {
+            alert(`Ele é decimal.`)
+        }
+    }    
 
-    
     //SAÍDA
 
 
